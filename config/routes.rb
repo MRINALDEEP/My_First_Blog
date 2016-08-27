@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
     root 'pages#home'
     get  'about' => 'pages#about'
+    get  'signup' => 'users#new'
+    resources :users,expect: [:new]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
