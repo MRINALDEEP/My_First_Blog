@@ -31,7 +31,7 @@
 
 <div class="form-group">
 	<div class="col-sm-offset-5 col-sm-10">
-	<%= art.submit "SignUp",class:"btn btn-primary"%>
+	<%= art.submit(@user.new_record? ? "SignUp":"Update Record",class:"btn btn-primary")%>
 	</div>
 </div>
 
