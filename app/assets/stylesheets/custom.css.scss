@@ -1,2 +1,54 @@
+$navbar-default-bg:#990000;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+#logo {
+  
+  float:left;
+  font-size:30px;
+  letter-space:-1px;
+  font-weight:bold;
+  
+}
+#logo:hover {
+ color:#282828;
+}
+
+.center {
+  text-align:center;
+}
+.jumbotron {
+  background-image: asset-url('Ruby-on-Rails4.jpg');
+  background-size:cover;
+  height:400px;
+}
+.btn-lg {
+  margin-top:50px;
+}
+
+footer {
+  margin-top:50px;
+  padding-top:10px;
+  border-top: 1px solid black;
+}
+footer ul {
+  float:right;
+  list-style:none;
+}
+.link {
+  color:#282828;
+}
+.article-action {
+  border-top: 1px solid #eaeaea;
+  padding-top: 10px;
+}
+.description {
+  margin-top:0px;
+}
+.article-title {
+  font-size: 25px;
+}
+.article-body {
+  border-top:1px solid #eaeaea;
+  padding-top:15px;
+  padding-bottom:15px;
+}
