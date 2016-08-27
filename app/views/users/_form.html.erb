@@ -1,0 +1,45 @@
+<%= render 'shared/errors' ,obj: @user %>
+
+<div class="row">
+	<div class='col-xs-12'>
+
+<%= form_for(@user, :html => { class:"form-horizontal" , role: "form"}) do |art| %>
+<div class="form-group">
+	<div class="control-label col-sm-2">
+	<%= art.label :username %>
+	</div>
+	<div class="col-sm-8">
+	<%= art.text_field :username  ,class: "form-control",placeholder:"Type Your Username",autofocus:true%>
+    </div>
+</div>
+<div class="form-group">
+	<div class="control-label col-sm-2">
+	<%= art.label :email %>
+	</div>
+	<div class="col-sm-8">
+	<%= art.email_field :email ,class: "form-control",placeholder:"Type Your Email"%>
+	</div>
+</div>
+<div class="form-group">
+	<div class="control-label col-sm-2">
+	<%= art.label :password %>
+	</div>
+	<div class="col-sm-8">
+	<%= art.password_field :password ,class: "form-control",placeholder:"Type Password",autofocus:true%>
+    </div>
+</div>
+
+<div class="form-group">
+	<div class="col-sm-offset-5 col-sm-10">
+	<%= art.submit "SignUp",class:"btn btn-primary"%>
+	</div>
+</div>
+
+
+
+<% end %>
+</div>
+</div>
+<div class="col-sm-offset-4 col-sm-8">
+<%= link_to "Cancel Request And Go Back To Article Listing" , articles_path %>
+</div>
