@@ -13,11 +13,12 @@
 		    	           <%= time_ago_in_words(article.created_at) %>ago,
 		    	           <%= time_ago_in_words(article.updated_at) %>ago
 		    </div>
+		    <% if logged_in? && current_user==article.user%>
 		    <div class="article-action">
 		    	<%= link_to "Edit this Article" , edit_article_path(article),class:"btn btn-success btn-xs"%>
 				<%= link_to "Delete This Article", article_path(article),method: :delete,data:{confirm:"Are You Sure?"},class:"btn btn-danger btn-xs"%>
 		    </div>
-		
+		    <% end %>
         </div>
        </div>
        </div>
