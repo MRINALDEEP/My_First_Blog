@@ -14,11 +14,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Users", users_path %></li>
-        <li><%= link_to "Articles" , articles_path %></li>
+        <li><%= link_to "Users", users_path,id: "navi" %></li>
+        <li><%= link_to "Articles" , articles_path,id: "navi" %></li>
         <% if logged_in? %>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" id="navi" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><%= link_to "Create New Article", new_article_path%></li>
@@ -33,7 +33,7 @@
         <% end %>
       </ul>
       
-      <form class="navbar-form navbar-left">
+      <form class="navbar-form navbar-left" id= "navi">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
@@ -41,7 +41,7 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
       	<% if logged_in? %>
-        <li><%= link_to 'Log Out',logout_path,method: :delete %></li>
+        <li><%= link_to 'Log Out',logout_path,method: :delete,id: "navi" %></li>
         <li class="dropdown">
           <a href="#" id="user-image" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username%> <%= gravatar_for current_user,size:50 %><span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -53,9 +53,9 @@
           </ul>
          </li>
          <% else %>
-         <ul class="nav navbar-nav navbar-right">
-         <li><%= link_to 'Log In',login_path%></li>
-         <li><%= link_to 'Sign Up',signup_path %></li>
+         
+         <li><%= link_to 'Log In',login_path,id: "navi"%></li>
+         <li><%= link_to 'Sign Up',signup_path ,id: "navi"%></li>
          <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

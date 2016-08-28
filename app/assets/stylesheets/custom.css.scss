@@ -1,15 +1,26 @@
 $navbar-default-bg:#990000;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body{
+  font-family: "Exo 2", Arial, sans-serif;
+}
+.nav {
+   font-size: 20px;
+   font-weight:bold;
+   
+   }
+
 #logo {
   
   float:left;
   font-size:30px;
   letter-space:-1px;
   font-weight:bold;
+  color:#fff;
   
 }
-#logo:hover {
+#logo:hover,#navi:hover {
  color:#282828;
 }
 
@@ -62,10 +73,17 @@ footer ul {
 
 li{
   padding-top:10px;
+ 
 }
-
+#navi {
+  color:#fff;
+}
 #user-image{
-  padding-top:1px;
+  padding-top:3px;
+  color:#fff;
+}
+#user-image:hover{
+  color:#00ff80;
 }
 .navbar-form{
   padding-top: 10px;
